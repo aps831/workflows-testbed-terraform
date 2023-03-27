@@ -30,6 +30,7 @@ runtimes:
     - python@3.10.8
 actions:
   enabled:
+    - hardcoding-check
     - commit-branch
     - commitizen-prompt-conventional
     - commitizen-tools-check

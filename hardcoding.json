@@ -1,0 +1,22 @@
+[
+  {
+    "description": "Terraform Version (Exact)",
+    "value": "1.4.2",
+    "files": [
+      {
+        "filePath": ".tool-versions",
+        "valuePath": "terraform"
+      }
+    ]
+  },
+  {
+    "description": "Terraform Version (Bound)",
+    "value": "~>1.4.0",
+    "files": [
+      {
+        "filePath": "main.tf",
+        "valuePath": ".terraform[0].required_version"
+      }
+    ]
+  }
+]
