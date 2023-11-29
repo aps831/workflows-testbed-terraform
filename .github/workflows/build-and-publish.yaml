@@ -1,0 +1,22 @@
+name: Build and Publish Executable
+on:
+  push:
+    branches:
+      - "master"
+      - "prerelease"
+  pull_request: {}
+jobs:
+  build:
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    uses: aps831/workflows/.github/workflows/publish-terraform.yaml@refactor/build-release
+    with:
+      prerelease-branch: "prerelease"
+      update-branch-base: "chore/publish-update"
+      tag-prefix: "v"
+      working-directory: "."
+      is-release-on-default-branch: true
+    secrets:
+      ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}

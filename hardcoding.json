@@ -14,7 +14,11 @@
     "value": "~>1.4.0",
     "files": [
       {
-        "filePath": "main.tf",
+        "filePath": "moduleA/main.tf",
+        "valuePath": ".terraform[0].required_version"
+      },
+      {
+        "filePath": "moduleB/main.tf",
         "valuePath": ".terraform[0].required_version"
       }
     ]
