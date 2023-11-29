@@ -6,6 +6,10 @@
       {
         "filePath": ".tool-versions",
         "valuePath": "terraform"
+      },
+      {
+        "filePath": ".github/workflows/build-and-publish.yaml",
+        "valuePath": ".jobs.build.with.terraform-version"
       }
     ]
   },

@@ -18,5 +18,9 @@ jobs:
       tag-prefix: "v"
       working-directory: "."
       is-release-on-default-branch: true
+      terraform-version: "1.4.2"
+      paths: |
+        moduleA
+        moduleB
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
