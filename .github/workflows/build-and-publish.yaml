@@ -1,4 +1,4 @@
-name: Build and Publish Executable
+name: Build and Publish Repository
 on:
   push:
     branches:
