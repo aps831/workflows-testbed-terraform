@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 
 - Add actions read permissions [skip ci]
 - Use issue comment trigger [skip ci]
+- Update for v0.7.0 release [skip ci]
 
 ## [0.6.0] - 2023-11-29
 
