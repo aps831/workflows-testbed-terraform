@@ -18,6 +18,6 @@ jobs:
         moduleA
         moduleB
       tfvars-filename: "terraform.tfvars"
-      tfvars-update-values: "tag|v\\d+\\.\\d+\\.\\d+|v2.7.9"
+      tfvars-update-values: "tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|v2.7.9"
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
