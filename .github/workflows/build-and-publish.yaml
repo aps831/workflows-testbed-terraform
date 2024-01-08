@@ -11,11 +11,13 @@ permissions:
   pull-requests: write
 jobs:
   build:
-    uses: aps831/workflows/.github/workflows/build-and-publish-terraform.yaml@master
+    uses: aps831/workflows/.github/workflows/build-and-publish-terraform.yaml@feat/deploy
     with:
       terraform-version: "1.4.2"
       paths: |
         moduleA
         moduleB
+      tfvars-filename: "terraform.tfvars"
+      tfvars-update-values: "tag|v\\d+\\.\\d+\\.\\d+|v2.7.9"
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
