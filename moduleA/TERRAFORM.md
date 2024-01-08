@@ -19,7 +19,9 @@ No resources.
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_tag"></a> [tag](#input\_tag) | Tag | `string` | n/a | yes |
 
 ## Outputs
 
