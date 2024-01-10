@@ -7,6 +7,10 @@ on:
         description: Tag
         required: true
         type: string
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
 jobs:
   candidate:
     uses: aps831/workflows/.github/workflows/deployment-candidate-sub.yaml@feat/deploy
