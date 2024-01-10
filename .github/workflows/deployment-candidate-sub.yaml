@@ -18,5 +18,3 @@ jobs:
       tag: ${{ inputs.tag }}
       tfvars-filename: "terraform.tfvars"
       tfvars-update-values: "tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|${{ inputs.tag }}"
-    secrets:
-      ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
