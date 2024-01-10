@@ -21,3 +21,17 @@ jobs:
       tfvars-update-values: "tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|v2.7.9"
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # TODO delete
+  record:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: aps831/gh-actions/deployment-record-pub@feat/deploy
+        with:
+          target-owner: "aps831"
+          target-repo: "workflows-testbed-basic"
+          target-workflow: "deployment-record-sub.yaml"
+          target-branch: "master"
+          tag: "v1.7.5"
+          env: "dev"
+          timestamp: "240110120305"
+          message: "hello, world"
