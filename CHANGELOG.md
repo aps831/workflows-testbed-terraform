@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.12.0] - 2024-01-10
+
+### Features
+
+- Test
+
 ## [0.11.0] - 2024-01-10
 
 ### Features
@@ -13,6 +19,7 @@ All notable changes to this project will be documented in this file.
 - Add sub and pub workflows [skip ci]
 - Update permissions [skip ci]
 - Remove token
+- Update for v0.11.0 release [skip ci]
 
 ## [0.10.0] - 2024-01-08
 
