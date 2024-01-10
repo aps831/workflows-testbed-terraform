@@ -35,3 +35,4 @@ jobs:
           env: "dev"
           timestamp: "240110120305"
           message: "hello, world"
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
