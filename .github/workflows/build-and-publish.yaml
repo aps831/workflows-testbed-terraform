@@ -9,10 +9,6 @@ permissions:
   contents: write
   issues: write
   pull-requests: write
-env:
-  TFVARS_FILENAME: "terraform.tfvars"
-  TFVARS_TAG: "image_tag"
-  TFVARS_SEMVER_REGEX: "[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+"
 jobs:
   build:
     uses: aps831/workflows/.github/workflows/build-and-publish-terraform.yaml@feat/deploy
@@ -23,9 +19,9 @@ jobs:
         moduleB
       # tfvars-filename: "terraform.tfvars"
       # tfvars-update-values: "tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|v2.7.9"
-      tfvars-filename: ${{ env.TFVARS_FILENAME }}
+      tfvars-filename: "terraform.tfvars"
       tfvars-update-values:
-        "${{ env.TFVARS_TAG }}|${{ env.TAG_PREFIX }}${{ env.TFVARS_SEMVER_REGEX }}|${{
+        "image_tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|${{
         steps.control.outputs.tag-version-next }}"
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
