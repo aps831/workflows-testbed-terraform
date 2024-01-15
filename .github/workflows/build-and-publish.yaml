@@ -20,8 +20,6 @@ jobs:
       # tfvars-filename: "terraform.tfvars"
       # tfvars-update-values: "tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|v2.7.9"
       tfvars-filename: "terraform.tfvars"
-      tfvars-update-values:
-        "image_tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|${{
-        steps.control.outputs.tag-version-next }}"
+      tfvars-update-values: "image_tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|v3.4.5"
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
