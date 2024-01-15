@@ -2,11 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.14.0] - 2024-01-15
+
+### Features
+
+- Test tfvars
+- Remove env
+- Hardcode tag
+
+### Miscellaneous Tasks
+
+- Remove pub and sub test [skip ci]
+
 ## [0.13.0] - 2024-01-10
 
 ### Features
 
 - Test
+
+### Miscellaneous Tasks
+
+- Update for v0.13.0 release [skip ci]
 
 ## [0.12.0] - 2024-01-10
 
