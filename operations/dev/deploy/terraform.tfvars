@@ -1,0 +1,6 @@
+image_tag                 = "v0.16.2"
+region                    = "eu-west-2"
+email_address             = "dev.reports@andrewspratley.co.uk"
+nr_open_data_schedule_url = "https://publicdatafeeds.networkrail.co.uk/ntrod/CifFileAuthenticate?type=CIF_%s_TOC_FULL_DAILY&day=toc-full"
+domain_path               = "/domain-andrewspratley-co-uk"
+backend_path              = "/operations-reports-backend"
