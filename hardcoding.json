@@ -1,0 +1,30 @@
+[
+  {
+    "description": "Terraform Version (Exact)",
+    "value": "1.4.2",
+    "files": [
+      {
+        "filePath": ".tool-versions",
+        "valuePath": "terraform"
+      },
+      {
+        "filePath": ".github/workflows/build-and-publish.yaml",
+        "valuePath": ".jobs.build.with.terraform-version"
+      }
+    ]
+  },
+  {
+    "description": "Terraform Version (Bound)",
+    "value": "~>1.4.0",
+    "files": [
+      {
+        "filePath": "moduleA/main.tf",
+        "valuePath": ".terraform[0].required_version"
+      },
+      {
+        "filePath": "moduleB/main.tf",
+        "valuePath": ".terraform[0].required_version"
+      }
+    ]
+  }
+]
