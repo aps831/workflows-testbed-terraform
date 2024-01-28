@@ -2,9 +2,13 @@
 name: Build and Publish Repository
 on:
   push:
-    branches:
-      - "master"
-      - "prerelease"
+  issue_comment:
+    types:
+      - created
+  # push:
+  #   branches:
+  #     - "master"
+  #     - "prerelease"
 permissions:
   contents: write
   issues: write
@@ -19,5 +23,6 @@ jobs:
         moduleB
       tfvars-filename: "terraform.tfvars"
       tfvars-update-values: "tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|v2.7.9"
+      release-on-default-branch: false
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
