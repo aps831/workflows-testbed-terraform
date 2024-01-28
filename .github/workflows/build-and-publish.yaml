@@ -19,8 +19,8 @@ jobs:
     with:
       terraform-version: "1.4.2"
       paths: |
-        moduleA
-        moduleB
+        dev
+        prod
       tfvars-filename: "terraform.tfvars"
       tfvars-update-values: "tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|v2.7.9"
       release-on-default-branch: false
