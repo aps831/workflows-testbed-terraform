@@ -43,7 +43,7 @@ jobs:
       - uses: aps831/gh-actions/deployment-terraform@master
         if: ${{ steps.deploy-branch.outputs.continue == 'true' }}
         with:
-          working-directory: "."
+          working-directory: ${{ steps.deploy-branch.outputs.environment }}
           plan: ${{ steps.deploy-branch.outputs.noop }}
           apply: ${{ steps.deploy-branch.outputs.op }}
           terraform-version: ${{ env.TERRAFORM_VERSION }}
