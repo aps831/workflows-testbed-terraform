@@ -10,6 +10,10 @@
       {
         "filePath": ".github/workflows/build-and-publish.yaml",
         "valuePath": ".jobs.build.with.terraform-version"
+      },
+      {
+        "filePath": ".github/workflows/deploy.yaml",
+        "valuePath": ".env.TERRAFORM_VERSION"
       }
     ]
   },

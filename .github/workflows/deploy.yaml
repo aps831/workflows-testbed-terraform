@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+---
+name: Deploy Application
+on:
+  issue_comment:
+    types:
+      - created
+env:
+  TERRAFORM_VERSION: 1.4.2
+permissions:
+  contents: write
+  pull-requests: write
+  deployments: write
+  checks: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if:
+      ${{ !contains(github.triggering_actor, '[bot]' ) && github.event.issue.pull_request &&
+      (contains(github.event.comment.body, '.noop') || contains(github.event.comment.body,
+      '.deploy')) }}
+    steps:
+      # github-branch-event
+      - uses: aps831/gh-actions/github-branch-event@master
+        id: branch-event
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      # git checkout event branch
+      - uses: aps831/gh-actions/git-checkout@master
+        with:
+          branch: ${{ steps.branch-event.outputs.branch-event }}
+
+      # deploy-branch
+      - uses: aps831/gh-actions/deploy-branch@master
+        id: deploy-branch
+        with:
+          environment: "prod"
+          environment-targets: "dev,prod"
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      # deployment-terraform
+      - uses: aps831/gh-actions/deployment-terraform@master
+        if: ${{ steps.deploy-branch.outputs.continue == 'true' }}
+        with:
+          working-directory: "."
+          plan: ${{ steps.deploy-branch.outputs.noop }}
+          apply: ${{ steps.deploy-branch.outputs.op }}
+          terraform-version: ${{ env.TERRAFORM_VERSION }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
