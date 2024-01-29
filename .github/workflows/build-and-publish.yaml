@@ -15,11 +15,11 @@ permissions:
   pull-requests: write
 jobs:
   build:
-    uses: aps831/workflows/.github/workflows/build-and-publish-terraform.yaml@feat/deploy
+    uses: aps831/workflows/.github/workflows/build-and-publish-terraform.yaml@master
     if:
-      ${{ (github.event_name == 'push' && !contains(github.triggering_actor, '[bot]' )) ||
+      ${{ !contains(github.triggering_actor, '[bot]') && (github.event_name == 'push' ||
       (github.event.issue.pull_request && !contains(github.event.comment.body, '.noop') &&
-      !contains(github.event.comment.body, '.deploy')) }}
+      !contains(github.event.comment.body, '.deploy'))) }}
     with:
       terraform-version: "1.4.2"
       paths: |
