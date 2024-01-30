@@ -22,7 +22,7 @@
     "value": "~>1.4.0",
     "files": [
       {
-        "filePath": "dev/main.tf",
+        "filePath": "devTEMP/main.tf",
         "valuePath": ".terraform[0].required_version"
       },
       {
