@@ -40,11 +40,20 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       # deployment-terraform
-      - uses: aps831/gh-actions/deployment-terraform@master
+      - uses: aps831/gh-actions/deployment-terraform@feat/terraform-plan-apply
         if: ${{ steps.deploy-branch.outputs.continue == 'true' }}
+        id: terraform
         with:
           working-directory: ${{ steps.deploy-branch.outputs.environment }}
           plan: ${{ steps.deploy-branch.outputs.noop }}
           apply: ${{ steps.deploy-branch.outputs.op }}
           terraform-version: ${{ env.TERRAFORM_VERSION }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      # github-add-issue-comment
+      - uses: aps831/gh-actions/github-add-issue-comment@master
+        if: ${{ always() }}
+        with:
+          comment: ${{ steps.terraform.outputs.stdout }}
+          issue-number: ${{ github.event.issue.number }}
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }} # prevent issue_comment trigger
