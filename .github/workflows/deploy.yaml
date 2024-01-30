@@ -51,7 +51,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       # github-add-issue-comment
-      - uses: aps831/gh-actions/github-add-issue-comment@master
+      - uses: aps831/gh-actions/github-add-issue-comment@feat/terraform-plan-apply
         if: ${{ always() }}
         with:
           comment: ${{ steps.terraform.outputs.stdout }}
