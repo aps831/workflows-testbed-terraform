@@ -40,7 +40,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       # deployment-terraform
-      - uses: aps831/gh-actions/deployment-terraform@feat/terraform-plan-apply
+      - uses: aps831/gh-actions/deployment-terraform@master
         if: ${{ steps.deploy-branch.outputs.continue == 'true' }}
         id: terraform
         with:
@@ -51,7 +51,7 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       # github-add-issue-comment
-      - uses: aps831/gh-actions/github-add-issue-comment@feat/terraform-plan-apply
+      - uses: aps831/gh-actions/github-add-issue-comment@master
         if: ${{ always() }}
         with:
           comment: ${{ steps.terraform.outputs.stdout }}
