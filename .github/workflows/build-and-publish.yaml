@@ -25,8 +25,6 @@ jobs:
       paths: |
         dev
         prod
-      tfvars-filename: "terraform.tfvars"
-      tfvars-update-values: "tag|v[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+|v2.7.9"
       release-on-default-branch: false
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
