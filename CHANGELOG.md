@@ -4,11 +4,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.18.1] - 2024-09-19
+
+### Bug Fixes
+
+- Test
+
 ## [0.18.0] - 2024-09-19
 
 ### Features
 
 - Wip
+
+### Miscellaneous Tasks
+
+- Update for v0.18.0 release [skip ci]
 
 ## [0.17.0] - 2024-09-19
 
