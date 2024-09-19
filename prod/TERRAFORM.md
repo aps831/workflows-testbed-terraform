@@ -1,10 +1,10 @@
 <!-- BEGIN_TF_DOCS -->
-
+<!-- markdownlint-disable MD041 -->
 ## Requirements
 
-| Name                                                                     | Version |
-| ------------------------------------------------------------------------ | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | ~>1.4.0 |
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~>1.4.0 |
 
 ## Providers
 
@@ -24,8 +24,7 @@ No inputs.
 
 ## Outputs
 
-| Name                                                                 | Description |
-| -------------------------------------------------------------------- | ----------- |
-| <a name="output_hello_world"></a> [hello_world](#output_hello_world) | n/a         |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_hello_world"></a> [hello\_world](#output\_hello\_world) | n/a |
 <!-- END_TF_DOCS -->
