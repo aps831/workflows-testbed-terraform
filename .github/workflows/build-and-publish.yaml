@@ -25,6 +25,6 @@ jobs:
       paths: |
         dev
         prod
-      release-on-default-branch: false
+      release-on-default-branch: true
     secrets:
       ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
