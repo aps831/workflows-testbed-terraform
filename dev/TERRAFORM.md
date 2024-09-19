@@ -27,8 +27,9 @@ No resources.
 
 ## Outputs
 
-| Name                                                                 | Description |
-| -------------------------------------------------------------------- | ----------- |
-| <a name="output_hello_world"></a> [hello_world](#output_hello_world) | n/a         |
+| Name                                                                       | Description |
+| -------------------------------------------------------------------------- | ----------- |
+| <a name="output_goodbye_world"></a> [goodbye_world](#output_goodbye_world) | n/a         |
+| <a name="output_hello_world"></a> [hello_world](#output_hello_world)       | n/a         |
 
 <!-- END_TF_DOCS -->
