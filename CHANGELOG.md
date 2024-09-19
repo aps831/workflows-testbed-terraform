@@ -4,11 +4,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.20.0] - 2024-09-19
+
+### Features
+
+- Test
+
 ## [0.19.4] - 2024-09-19
 
 ### Bug Fixes
 
 - Test again
+
+### Miscellaneous Tasks
+
+- Update for v0.19.4 release [skip ci]
 
 ## [0.19.3] - 2024-09-19
 
