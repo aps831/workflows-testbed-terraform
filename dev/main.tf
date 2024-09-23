@@ -5,3 +5,7 @@ terraform {
 output "hello_world" {
   value = "Hello, World!"
 }
+
+output "goodbye_world" {
+  value = "Hello, World!"
+}
